@@ -15,7 +15,7 @@ export const AboutSection: React.FC = () => {
       url: '/images/yashwanth-portrait.jpg',
       label: 'Developer Profile',
       caption: 'Full-Stack & Systems Architecture',
-      objectPosition: 'center 18%',
+      objectPosition: 'center calc(18% - 30px)',
     },
     {
       id: 'conference',
@@ -173,7 +173,7 @@ export const AboutSection: React.FC = () => {
           </div>
 
           {/* ══ RIGHT — 5/12: Interactive Photo Showcase & Capability Cards ══ */}
-          <div className="md:col-span-5 pt-4 md:pt-16 lg:pt-[104px] space-y-4 max-w-lg mx-auto md:max-w-none w-full">
+          <div className="md:col-span-5 pt-4 md:pt-8 lg:pt-[74px] space-y-4 max-w-lg mx-auto md:max-w-none w-full">
             
             {/* Interactive Photo Switcher Card with 3D Tilt */}
             <TiltCard
