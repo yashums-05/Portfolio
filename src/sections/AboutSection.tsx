@@ -22,7 +22,7 @@ export const AboutSection: React.FC = () => {
       url: '/images/yashwanth-conference.jpg',
       label: 'ICTIEE 2024',
       caption: 'Official Delegate & Student Chapter Leadership',
-      objectPosition: 'center 16%',
+      objectPosition: 'center calc(16% + 20px)',
     },
   ];
 
