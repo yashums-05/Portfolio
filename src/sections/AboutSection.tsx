@@ -15,7 +15,7 @@ export const AboutSection: React.FC = () => {
       url: '/images/yashwanth-portrait.jpg',
       label: 'Developer Profile',
       caption: 'Full-Stack & Systems Architecture',
-      objectPosition: 'center calc(18% - 30px)',
+      objectPosition: 'center calc(18% - 75px)',
     },
     {
       id: 'conference',
