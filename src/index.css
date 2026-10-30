@@ -1,0 +1,359 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Studio Design System ─── */
+:root {
+  /* Core palette */
+  --studio-ink:        #050508;
+  --studio-ink-light:  #0C0C14;
+  --studio-ink-mid:    #181828;
+
+  --ivory:             #F5F0E8;
+  --ivory-dim:         #D9CEB8;
+
+  --steel:             #8B9BB4;
+  --steel-light:       #A8B8D0;
+
+  --mint:              #00D084;
+  --mint-light:        #2DFFA0;
+  --mint-glow-rgb:     0, 208, 132;
+
+  --amber:             #F5A623;
+  --amber-light:       #FBBF24;
+
+  --chartreuse:        #BFFF00;
+
+  /* Semantic tokens */
+  --color-primary:        var(--mint);
+  --color-primary-light:  var(--mint-light);
+  --color-secondary:      var(--amber);
+  --color-secondary-light:var(--amber-light);
+  --color-bg-deep:        var(--studio-ink);
+  --color-bg-card:        rgba(12, 12, 20, 0.85);
+  --color-border:         rgba(255, 255, 255, 0.06);
+  --color-border-glow:    rgba(var(--mint-glow-rgb), 0.22);
+  --color-glow:           var(--mint-glow-rgb);
+  --theme-canvas-vignette: rgba(5, 5, 8, 0.7);
+
+  /* Typography */
+  --font-display: 'Space Grotesk', 'Inter', sans-serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Fira Code', monospace;
+}
+
+html.light {
+  /* Core palette - Clean High-Contrast Light Mode */
+  --studio-ink:        #F8FAFC;
+  --studio-ink-light:  #FFFFFF;
+  --studio-ink-mid:    #F1F5F9;
+
+  --ivory:             #0F172A;
+  --ivory-dim:         #334155;
+
+  --steel:             #64748B;
+  --steel-light:       #475569;
+
+  --mint:              #059669;
+  --mint-light:        #10B981;
+  --mint-glow-rgb:     5, 150, 105;
+
+  --amber:             #D97706;
+  --amber-light:       #F59E0B;
+
+  --chartreuse:        #65A30D;
+
+  /* Semantic tokens */
+  --color-primary:        var(--mint);
+  --color-primary-light:  var(--mint-light);
+  --color-secondary:      var(--amber);
+  --color-secondary-light:var(--amber-light);
+  --color-bg-deep:        var(--studio-ink);
+  --color-bg-card:        rgba(255, 255, 255, 0.95);
+  --color-border:         rgba(15, 23, 42, 0.08);
+  --color-border-glow:    rgba(5, 150, 105, 0.25);
+  --color-glow:           var(--mint-glow-rgb);
+  --theme-canvas-vignette: rgba(248, 250, 252, 0.65);
+}
+
+/* ─── Base layer ─── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--studio-ink);
+    color: var(--ivory);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    color: var(--ivory);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  ::selection {
+    background-color: rgba(0, 208, 132, 0.25);
+    color: var(--ivory);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar        { width: 5px; }
+  ::-webkit-scrollbar-track  { background: var(--studio-ink); }
+  ::-webkit-scrollbar-thumb  { background: #22223A; border-radius: 9999px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--mint); }
+  html.light ::-webkit-scrollbar-thumb { background: #CBD5E1; }
+  html.light ::-webkit-scrollbar-thumb:hover { background: #059669; }
+}
+
+/* ─── Component layer ─── */
+@layer components {
+
+  /* Section label — small monospace badge above headings */
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;    /* 11px */
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--steel);
+  }
+
+  /* Editorial horizontal rule */
+  .editorial-line {
+    display: block;
+    height: 1px;
+    background: linear-gradient(to right, #4ADE80, #FACC15, transparent);
+    border: none;
+    opacity: 0.6;
+  }
+
+  /* Studio card — clean, no glassmorphism bloat */
+  .studio-card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .studio-card:hover {
+    border-color: rgba(var(--mint-glow-rgb), 0.18);
+    box-shadow: 0 24px 48px -16px rgba(0, 0, 0, 0.7),
+                0 0 0 1px rgba(var(--mint-glow-rgb), 0.06);
+    transform: translateY(-2px);
+  }
+
+  html.light .studio-card {
+    background: #FFFFFF;
+    border-color: rgba(15, 23, 42, 0.08);
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05);
+  }
+  html.light .studio-card:hover {
+    border-color: rgba(5, 150, 105, 0.3);
+    box-shadow: 0 20px 35px -10px rgba(15, 23, 42, 0.1);
+  }
+
+  /* Bento card — simplified, kept for compatibility */
+  .bento-card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .bento-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(var(--mint-glow-rgb), 0.1),
+      transparent 40%
+    );
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+  }
+
+  .bento-card:hover::before  { opacity: 1; }
+  .bento-card:hover {
+    border-color: var(--color-border-glow);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8),
+                0 0 30px -10px rgba(var(--mint-glow-rgb), 0.2);
+    transform: translateY(-2px);
+  }
+
+  /* Tech tag — compact monospace pill */
+  .tech-tag {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--steel-light);
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  }
+
+  .tech-tag:hover {
+    background: rgba(0, 208, 132, 0.08);
+    border-color: rgba(0, 208, 132, 0.2);
+    color: var(--mint-light);
+  }
+
+  html.light .tech-tag {
+    background: rgba(15, 23, 42, 0.04);
+    border-color: rgba(15, 23, 42, 0.08);
+    color: #334155;
+  }
+  html.light .tech-tag:hover {
+    background: rgba(5, 150, 105, 0.08);
+    border-color: rgba(5, 150, 105, 0.25);
+    color: #059669;
+  }
+
+  /* Gradient text — matching user reference: Vibrant Lime/Emerald to Golden Yellow */
+  .gradient-text,
+  .accent-gradient-text {
+    background: linear-gradient(
+      135deg,
+      #4ADE80 0%,
+      #A3E635 45%,
+      #FACC15 85%,
+      #F59E0B 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Interactive gradient text on cursor hover — Lime/Emerald into Sunny Yellow */
+  .hover-gradient-text {
+    display: inline-block;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .hover-gradient-text:hover {
+    background-image: linear-gradient(135deg, #4ADE80 0%, #A3E635 35%, #FACC15 75%, #F59E0B 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    filter: drop-shadow(0 0 14px rgba(74, 222, 128, 0.45));
+  }
+
+  .group-hover-gradient-text {
+    display: inline-block;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .group:hover .group-hover-gradient-text {
+    background-image: linear-gradient(135deg, #4ADE80 0%, #A3E635 35%, #FACC15 75%, #F59E0B 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    filter: drop-shadow(0 0 14px rgba(74, 222, 128, 0.45));
+  }
+
+
+  /* Hero sub-headline multi-color hover gradient in both dark & light modes */
+  .hero-headline-hover {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .hero-headline-hover:hover {
+    background-image: linear-gradient(90deg, #34d399 0%, #67e8f9 35%, #c084fc 70%, #fcd34d 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
+  }
+  .stat-gradient-text {
+    background-image: linear-gradient(90deg, #4ADE80 0%, #A3E635 45%, #FACC15 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Dot-grid background */
+  .grid-bg {
+    background-image: radial-gradient(rgba(245, 240, 232, 0.055) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  html.light .grid-bg {
+    background-image: radial-gradient(rgba(15, 23, 42, 0.06) 1px, transparent 1px);
+  }
+
+  /* Marquee */
+  .marquee-track {
+    display: flex;
+    white-space: nowrap;
+    animation: marqueeScroll 25s linear infinite;
+  }
+  .marquee-track:hover { animation-play-state: paused; }
+
+  /* Theme utility aliases kept for compatibility */
+  .text-theme-primary   { color: var(--color-primary); }
+  .text-theme-secondary { color: var(--color-secondary); }
+  .bg-theme-primary     { background-color: var(--color-primary); }
+  .border-theme-glow    { border-color: var(--color-border-glow); }
+  .text-glow            { text-shadow: 0 0 30px rgba(var(--mint-glow-rgb), 0.55); }
+}
+
+/* ─── Utility layer ─── */
+@layer utilities {
+  .font-display { font-family: var(--font-display); }
+  .font-mono    { font-family: var(--font-mono); }
+}
+
+/* ─── Keyframes ─── */
+@keyframes marqueeScroll {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marqueeScrollReverse {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+@keyframes borderBeam {
+  0% { offset-distance: 0%; }
+  100% { offset-distance: 100%; }
+}
+
+@keyframes textShimmer {
+  0%   { background-position: 0%   50%; }
+  100% { background-position: 200% 50%; }
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1);   opacity: 1;   }
+  50%      { transform: scale(1.4); opacity: 0.6; }
+}
