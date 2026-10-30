@@ -306,102 +306,90 @@ export const projectsData: Project[] = [
 
 export const experienceItems: ExperienceItem[] = [
   {
-    id: "iucee-digital-media",
-    title: "Head of Digital and Social Media",
+    id: "iucee-internal-affairs",
+    title: "Internal Affair",
     organization: "IUCEE EWB–MCE Student Chapter",
-    period: "2023 – Present",
+    period: "Sep 2026 – Present",
     location: "Malnad College of Engineering, Hassan",
-    type: "LEADERSHIP",
-    statusBadge: "Digital Communications",
+    type: "INTERNAL AFFAIRS",
+    statusBadge: "Active Leadership",
     description: [
-      "Leading the chapter's digital presence, social media strategy, and online communication activities.",
-      "Managing social media platforms and developing promotional campaigns for technical events, workshops, and student initiatives.",
-      "Designing professional posters, banners, certificates, and digital promotional materials.",
-      "Coordinating the digital media team and maintaining consistent branding across communication channels.",
-      "Increasing student engagement and outreach through creative digital content and communication strategies."
+      "Overseeing internal governance, chapter policies, inter-team communications, and cross-functional coordination across all technical committees.",
+      "Facilitating seamless alignment between the core executive board, faculty advisors, and student members.",
+      "Leading internal administrative workflows, documentation, and strategic meeting governance for ongoing chapter initiatives."
     ],
     coreCompetencies: [
-      "Digital Marketing",
-      "Social Media Management",
-      "Graphic Design",
-      "Branding",
-      "Team Leadership",
-      "Digital Communications"
+      "Internal Communications",
+      "Organizational Governance",
+      "Team Coordination",
+      "Strategic Planning",
+      "Conflict Resolution",
+      "Administrative Leadership"
+    ]
+  },
+  {
+    id: "iucee-member",
+    title: "Member",
+    organization: "IUCEE EWB–MCE Student Chapter",
+    period: "Oct 2024 – Present",
+    location: "Malnad College of Engineering, Hassan",
+    type: "STUDENT CHAPTER",
+    statusBadge: "Core Contributor",
+    description: [
+      "Contributing actively to engineering education, sustainable development initiatives, and community outreach projects under IUCEE & Engineers Without Borders.",
+      "Collaborating on technical symposiums, peer mentorship workshops, and student innovation ideathons at Malnad College of Engineering.",
+      "Engaging with multidisciplinary engineering student cohorts to drive community-centric technology solutions."
+    ],
+    coreCompetencies: [
+      "Engineering Leadership",
+      "Community Outreach",
+      "Teamwork",
+      "Technical Collaboration",
+      "Problem Solving"
     ]
   },
   {
     id: "iucee-event-manager",
     title: "Event Manager",
     organization: "IUCEE EWB–MCE Student Chapter",
-    period: "2024 – Present",
+    period: "Oct 2025 – Aug 2026",
     location: "Malnad College of Engineering, Hassan",
     type: "EVENT OPERATIONS",
-    statusBadge: "Event Operations",
+    statusBadge: "Operations Lead",
     description: [
-      "Planning, coordinating, and executing technical events, workshops, ideathons, hackathons, and student development activities.",
-      "Managing event operations, participant registrations, scheduling, venue arrangements, and logistics.",
-      "Coordinating with faculty coordinators, speakers, participants, volunteers, and organizing committees.",
-      "Managing event documentation, promotional activities, and overall event execution.",
-      "Contributing to the successful organization of large-scale technical and innovation-driven events, including Avishkar Manthan."
+      "Directed planning, end-to-end logistics, scheduling, and execution for major college technical events, hackathons, and ideathons.",
+      "Managed participant registrations, venue administration, equipment coordination, and on-ground operations.",
+      "Liaised with faculty coordinators, external speakers, volunteers, and technical juries to ensure flawless execution of large-scale initiatives including Avishkar Manthan."
     ],
     coreCompetencies: [
-      "Event Planning",
-      "Event Management",
-      "Operations Management",
+      "Event Operations",
+      "Logistics Management",
       "Project Coordination",
-      "Team Collaboration",
-      "Leadership"
+      "Team Leadership",
+      "Budgeting & Scheduling",
+      "Stakeholder Communication"
     ]
   },
   {
-    id: "iucee-internal-affairs",
-    title: "Internal Affairs",
+    id: "iucee-head-of-digital",
+    title: "Head of Digital",
     organization: "IUCEE EWB–MCE Student Chapter",
-    period: "2024 – Present",
+    period: "Jun 2025 – Sep 2025",
     location: "Malnad College of Engineering, Hassan",
-    type: "INTERNAL AFFAIRS",
-    statusBadge: "Organizational Management",
+    type: "LEADERSHIP & DIGITAL",
+    statusBadge: "Media Strategy",
     description: [
-      "Coordinating internal chapter activities and maintaining effective communication among student members.",
-      "Facilitating coordination between different chapter teams and organizing committees.",
-      "Supporting member engagement, internal administration, and organizational activities.",
-      "Assisting in planning meetings, distributing responsibilities, and ensuring smooth execution of chapter initiatives.",
-      "Strengthening teamwork, collaboration, and coordination within the student chapter."
+      "Spearheaded the chapter's official digital branding, online presence, and digital communication strategy across social platforms.",
+      "Designed high-impact digital promotional collateral, brochures, social banners, and event graphics.",
+      "Managed digital campaign rollouts, significantly increasing student participation and online community reach."
     ],
     coreCompetencies: [
-      "Internal Communications",
-      "Organizational Management",
-      "Team Coordination",
-      "Administration",
-      "Conflict Resolution",
-      "Leadership"
-    ]
-  },
-  {
-    id: "iucee-workshop-instructor",
-    title: "Web Development Workshop Instructor",
-    organization: "IUCEE EWB–MCE Student Chapter",
-    period: "2024 – 2025",
-    location: "Malnad College of Engineering, Hassan",
-    type: "TECHNICAL TRAINING",
-    statusBadge: "Mentorship",
-    description: [
-      "Conducting interactive web development workshops for fellow engineering students.",
-      "Delivering hands-on training in frontend web technologies, including HTML, CSS, and JavaScript.",
-      "Explaining fundamental web development concepts through practical demonstrations and coding exercises.",
-      "Guiding students in developing basic web pages and understanding frontend development workflows.",
-      "Helping participants troubleshoot coding errors and understand web development concepts.",
-      "Encouraging practical learning, technical exploration, and collaborative problem-solving."
-    ],
-    coreCompetencies: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Frontend Development",
-      "Technical Instruction",
-      "Student Mentorship",
-      "Public Speaking",
-      "Knowledge Sharing"
+      "Digital Branding",
+      "Social Media Strategy",
+      "Visual Design",
+      "Content Strategy",
+      "Campaign Management",
+      "Creative Direction"
     ]
   },
   {
@@ -416,8 +404,7 @@ export const experienceItems: ExperienceItem[] = [
       "Contributed to the planning and execution of CalmStacks, a 24-hour hackathon organized by the Department of Computer Science and Engineering.",
       "Assisted in participant coordination, event logistics, and on-site operations.",
       "Supported technical arrangements, hardware and network setup, and troubleshooting during the hackathon.",
-      "Coordinated with organizing teams, participating developer teams, and fellow volunteers to ensure smooth event execution.",
-      "Helped maintain an engaging, collaborative environment for participants throughout the 24-hour event."
+      "Coordinated with organizing teams, participating developer teams, and fellow volunteers to ensure smooth event execution."
     ],
     coreCompetencies: [
       "Hackathon Operations",
@@ -496,7 +483,7 @@ export const educationHistory: EducationItem[] = [
     degree: "B.E. in Computer Science and Engineering",
     institution: "Malnad College of Engineering (Autonomous), VTU",
     location: "Hassan, Karnataka",
-    duration: "2023 – Present",
+    duration: "Jan 2023 – Jun 2027",
     scoreLabel: "Cumulative GPA",
     scoreValue: "9.09 / 10.0",
     highlights: [
