@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { FileText, ArrowRight, ExternalLink, ChevronDown, Sparkles } from 'lucide-react';
+import { FileText, ArrowRight, ExternalLink, ChevronDown, Sparkles, Mail } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 import { sound } from '../utils/audio';
 import { useTheme } from '../context/ThemeContext';
@@ -182,6 +182,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
                 <FileText className="w-4 h-4 text-emerald-500" />
                 <span>View Resume</span>
               </button>
+
+              <a
+                href="#contact"
+                onClick={() => sound.playClick()}
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-display font-semibold text-xs sm:text-sm text-slate-800 bg-white border border-slate-300 hover:border-emerald-500 hover:bg-slate-50 dark:text-slate-200 dark:bg-white/[0.04] dark:border-white/[0.12] dark:hover:bg-white/[0.08] dark:hover:border-emerald-400/40 transition-all duration-300 hover:-translate-y-0.5 cursor-pointer shadow-sm group"
+              >
+                <Mail className="w-4 h-4 text-emerald-500 group-hover:scale-110 transition-transform" />
+                <span>Contact</span>
+              </a>
             </motion.div>
 
             {/* Social channels row */}
