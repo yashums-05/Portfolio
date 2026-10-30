@@ -207,19 +207,25 @@ export const AboutSection: React.FC = () => {
                 </div>
               </div>
 
-              {/* Photo Display with Balanced Proportions & Centered Face Framing */}
+              {/* Photo Display with Instant Pre-rendered Dual Buffer & Smooth Crossfade */}
               <div className="relative h-[320px] sm:h-[380px] md:h-[420px] lg:h-[480px] xl:h-[500px] overflow-hidden bg-slate-900">
-                <img
-                  src={currentPhoto.url}
-                  alt={currentPhoto.label}
-                  className="w-full h-full object-cover hover:scale-105 transition-all duration-700 ease-out"
-                  style={{ objectPosition: currentPhoto.objectPosition }}
-                  loading="eager"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
+                {photos.map((p) => (
+                  <img
+                    key={p.id}
+                    src={p.url}
+                    alt={p.label}
+                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-200 ease-out will-change-[opacity] ${
+                      activePhoto === p.id ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
+                    }`}
+                    style={{ objectPosition: p.objectPosition }}
+                    loading="eager"
+                    decoding="async"
+                  />
+                ))}
+                <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
 
                 {/* Bottom caption glass pill */}
-                <div className="absolute bottom-3 left-3 right-3 p-2.5 rounded-2xl bg-white/90 border border-slate-200 text-slate-800 dark:bg-dark-950/80 dark:border-white/[0.1] dark:text-slate-200 backdrop-blur-md shadow-lg flex items-center justify-between transition-colors duration-300">
+                <div className="absolute bottom-3 left-3 right-3 z-30 p-2.5 rounded-2xl bg-white/90 border border-slate-200 text-slate-800 dark:bg-dark-950/80 dark:border-white/[0.1] dark:text-slate-200 backdrop-blur-md shadow-lg flex items-center justify-between transition-colors duration-300">
                   <div className="flex items-center gap-2 text-xs font-mono min-w-0">
                     <MapPin className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400 shrink-0" />
                     <span className="font-medium tracking-tight truncate">{currentPhoto.caption}</span>
