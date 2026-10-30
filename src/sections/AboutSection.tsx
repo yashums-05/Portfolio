@@ -7,7 +7,7 @@ import { TiltCard } from '../components/TiltCard';
 import { sound } from '../utils/audio';
 
 export const AboutSection: React.FC = () => {
-  const [activePhoto, setActivePhoto] = useState<'portrait' | 'campus' | 'conference' | 'outdoor'>('portrait');
+  const [activePhoto, setActivePhoto] = useState<'portrait' | 'conference'>('portrait');
 
   const photos = [
     {
@@ -18,25 +18,11 @@ export const AboutSection: React.FC = () => {
       objectPosition: 'center 18%',
     },
     {
-      id: 'campus',
-      url: '/images/yashwanth-campus.jpg',
-      label: 'MCE Campus',
-      caption: 'Student Chapter & Campus Operations',
-      objectPosition: 'center 16%',
-    },
-    {
       id: 'conference',
       url: '/images/yashwanth-conference.jpg',
       label: 'ICTIEE 2024',
       caption: 'Official Delegate & Student Chapter Leadership',
       objectPosition: 'center 16%',
-    },
-    {
-      id: 'outdoor',
-      url: '/images/yashwanth-outdoor.jpg',
-      label: 'Campus Grounds',
-      caption: 'Engineering & Innovation Environment',
-      objectPosition: 'center 22%',
     },
   ];
 
