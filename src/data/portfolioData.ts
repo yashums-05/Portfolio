@@ -50,7 +50,7 @@ export const personalInfo: PersonalInfo = {
       id: "portrait",
       url: "/images/yashwanth-portrait.jpg",
       title: "Engineering Portrait",
-      caption: "B.E. Computer Science Engineering & Java/AI Systems Developer",
+      caption: "B.E. Computer Science Engineering & Java Systems Developer",
       tag: "Main Profile"
     },
     {
