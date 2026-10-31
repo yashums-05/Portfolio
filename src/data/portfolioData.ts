@@ -554,12 +554,12 @@ export const achievementsList: AchievementItem[] = [
   },
   {
     id: "ach-iasf-hackathon-2026",
-    title: "IASF Hackathon Participant 2026",
+    title: "EduAIthon — IUCEE Annual Student Forum 2026",
     category: "Hackathon",
     issuer: "IUCEE Annual Student Forum (IASF 2026)",
     date: "January 2026",
-    description: "Participated in high-intensity collaborative coding, hardware/software innovation, and rapid prototyping at the IASF Hackathon.",
-    badgeText: "Hackathon Finalist",
+    description: "Participated in high-intensity collaborative coding, AI-driven educational software innovation, and rapid prototyping at EduAIthon during the IUCEE Annual Student Forum.",
+    badgeText: "EduAIthon Finalist",
     verificationUrl: "https://drive.google.com/file/d/1ux3zMQqNqsGgI7E5igy7q9u49s3_Glen/view?usp=sharing"
   },
   {
