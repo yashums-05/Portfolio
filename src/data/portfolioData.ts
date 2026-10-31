@@ -574,12 +574,12 @@ export const achievementsList: AchievementItem[] = [
   },
   {
     id: "ach-vertex-navkis",
-    title: "Navkis Ideathon / Hackathon — Team Vertex",
+    title: "24-Hour Hackathon — Team Vertex Navkis",
     category: "Hackathon",
     issuer: "Navkis College of Engineering",
     date: "2025",
-    description: "Participated in the competitive ideathon & hackathon organized by Team Vertex at Navkis College of Engineering, developing innovative technical solutions.",
-    badgeText: "Ideathon Participant",
+    description: "Participated in the competitive 24-hour hackathon organized by Team Vertex at Navkis College of Engineering, developing innovative technical solutions.",
+    badgeText: "24-Hour Hackathon",
     verificationUrl: "https://drive.google.com/file/d/1ulh0-r1uxBB6LmLZG8Ns-92zX5ICtAtD/view?usp=sharing"
   },
   {
