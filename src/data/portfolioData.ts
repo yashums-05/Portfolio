@@ -372,7 +372,7 @@ export const experienceItems: ExperienceItem[] = [
   },
   {
     id: "iucee-head-of-digital",
-    title: "Head of Digital",
+    title: "Head of Digital and Social Media",
     organization: "IUCEE EWB–MCE Student Chapter",
     period: "Jun 2025 – Sep 2025",
     location: "Malnad College of Engineering, Hassan",
